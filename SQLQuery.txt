@@ -1,0 +1,38 @@
+
+CREATE DATABASE finalProject;
+
+
+USE finalProject;
+
+-- Creating the login table
+CREATE TABLE login (
+    username VARCHAR(50),
+    password VARCHAR(50)
+);
+
+CREATE TABLE Reservations (
+    cusNIC VARCHAR(50),
+    vehicleID VARCHAR(50),
+    rentalType VARCHAR(50),
+    amount VARCHAR(50),
+    from_date VARCHAR(50),
+    to_date VARCHAR(50),
+    PRIMARY KEY (cusNIC, vehicleID)
+);
+
+
+CREATE TABLE vehicles (
+    vehicleID VARCHAR(50) PRIMARY KEY,
+    model VARCHAR(50),
+    ownerN VARCHAR(50),
+    category VARCHAR(50),
+    contact VARCHAR(50)
+);
+
+
+CREATE TABLE customers (
+    nic VARCHAR(50) PRIMARY KEY,
+    name VARCHAR(50),
+    address VARCHAR(100),
+    contact VARCHAR(50)
+);
